@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{% block title %}Hello Django{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'hello/css/main.css' %}" />
+</head>
+
+<body>
+    <h1>Hello Django</h1>
+
+    <div id="wrapper">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
