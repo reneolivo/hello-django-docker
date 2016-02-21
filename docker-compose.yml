@@ -10,6 +10,8 @@ hello_django_app:
 
 hello_django_db:
   image: postgres:latest
+  volumes:
+    - ./db-data:/var/lib/postgresql/data
   ports:
     - 5432:5432
   environment:

@@ -2,3 +2,4 @@ __pycache__
 db.sqlite3
 vendors
 env-vars.yml
+db-data
