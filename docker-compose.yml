@@ -1,13 +1,3 @@
-hello_django_db:
-  image: postgres:latest
-  ports:
-    - 5432:5432
-  environment:
-    - POSTGRES_DB=hello_django_db
-  extends:
-    file: env-vars.yml
-    service: hello_django_env_vars
-
 hello_django_app:
   build: .
   volumes:
@@ -20,3 +10,20 @@ hello_django_app:
   extends:
     file: env-vars.yml
     service: hello_django_env_vars
+
+hello_django_db:
+  image: postgres:latest
+  ports:
+    - 5432:5432
+  environment:
+    - POSTGRES_DB=hello_django_db
+  extends:
+    file: env-vars.yml
+    service: hello_django_env_vars
+
+node:
+  image: digitallyseamless/nodejs-bower-grunt:0.12
+  volumes:
+    - ./bower.json:/data/bower.json
+    - ./.bowerrc:/data/.bowerrc
+    - ./hello_django/static/vendors:/data/hello_django/static/hello/vendors
