@@ -1,0 +1,22 @@
+hello_django_db:
+  image: postgres:latest
+  ports:
+    - 5432:5432
+  environment:
+    - POSTGRES_DB=hello_django_db
+  extends:
+    file: env-vars.yml
+    service: hello_django_env_vars
+
+hello_django_app:
+  build: .
+  volumes:
+    - ./hello_django:/usr/src/app/hello_django
+  ports:
+    - 8000:8000
+  command: sh ./init.sh
+  links:
+    - hello_django_db
+  extends:
+    file: env-vars.yml
+    service: hello_django_env_vars
