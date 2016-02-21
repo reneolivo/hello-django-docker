@@ -1,5 +1,19 @@
 body {
   font-family: Arial;
-  background: #F5F5F5;
+  background: #E7E7E7;
   color #444;
+}
+
+header#main-header {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #CCC;
+}
+
+header#main-header h1 {
+  margin-bottom: 0;
+}
+
+header#main-header h2 {
+  margin-top: 0;
 }

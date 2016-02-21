@@ -1,5 +1,21 @@
 {% extends 'hello/layout.html' %}
+{% load staticfiles %}
 
 {% block content %}
-  <h2>Hello Index</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <img src="{% static 'hello/images/docker-logo.png' %}" alt="Docker Logo" />
+    </div>
+    <div class="col-md-9">
+      <p>Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Curabitur suscipit suscipit tellus.</p>
+
+      <p>Vivamus euismod mauris. Nullam accumsan lorem in dui. Vivamus euismod mauris.</p>
+
+      <p>Duis leo. Nulla consequat massa quis enim. Nunc nonummy metus.</p>
+
+      <p>Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Curabitur a felis in nunc fringilla tristique. Curabitur ullamcorper ultricies nisi.</p>
+
+      <p>Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Praesent egestas neque eu enim.</p>
+    </div>
+  </div>
 {% endblock %}
